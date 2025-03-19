@@ -1,15 +1,6 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import CommonAreas from './../components/AccessibilityCard/CommonAreas';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Create Next App",
@@ -19,8 +10,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+    <meta name="description" content="Explore the most beautiful places to visit in 2025." />
+      <meta name="keywords" content="travel, destinations, vacation, tourism" />
+      <meta property="og:title" content="Best Travel Destinations 2025" />
+      <meta property="og:description" content="Discover amazing places to travel this year." />
+      <meta property="og:image" content="https://expedia.CommonAreas" />
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={"antialiased"}
       >
         {children}
       </body>
