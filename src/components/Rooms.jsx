@@ -1,71 +1,104 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import RoomCard from "./RoomCards/RoomCard";
-import image from "../../public/assets/download.jpg";
+import image from "../../public/assets/hotel.avif";
+import hall from "../../public/assets/hall.webp";
+
 import RoomsPage from "./RoomCards/RoomsPage";
 import SimilarCard from "./RoomCards/SimilarCard";
 import PopularCard from "./RoomCards/PopularCard";
 import SimilarProperties from "./RoomCards/SimilarProperties";
 import PopularThingsToDo from "./RoomCards/PopularThingsTodo";
 
-const roomData = [
-  {
-    image: "/room1.jpg",
-    title: "Deluxe Room, 1 Queen Bed",
-    rating: 8.5,
-    reviewText: "Very Good",
-    reviews: 250,
-    price: 150,
-    size: 450,
-    wifi: true,
-    sleeps: 2,
-    bedType: "Queen Bed",
-    refundable: true,
-    refundDate: "Mon, Apr 22",
-  },
-  {
-    image: "/room2.jpg",
-    title: "Signature Room, 1 King Bed",
-    rating: 7.8,
-    reviewText: "Good",
-    reviews: 195,
-    price: 120,
-    size: 400,
-    wifi: true,
-    sleeps: 2,
-    bedType: "King Bed",
-    refundable: true,
-    refundDate: "Tue, Apr 29",
-  },
-  {
-    image: "/room3.jpg",
-    title: "Premium Suite, 2 Double Beds",
-    rating: 9.2,
-    reviewText: "Excellent",
-    reviews: 320,
-    price: 200,
-    size: 600,
-    wifi: true,
-    sleeps: 4,
-    bedType: "2 Double Beds",
-    refundable: false,
-  },
-];
-
 const Rooms = () => {
+  // Static data for activities
+  const activities = [
+    {
+      name: "Skydiving Adventure",
+      distance: "5 miles away",
+      rating: "9.2/10",
+      reviews: 1025,
+      price: 250,
+      image: image,
+    },
+    {
+      name: "City Sightseeing Tour",
+      distance: "0.5 miles away",
+      rating: "8.5/10",
+      reviews: 800,
+      price: 45,
+      image: hall,
+    },
+    {
+      name: "Helicopter Ride Over City",
+      distance: "3 miles away",
+      rating: "9.0/10",
+      reviews: 620,
+      price: 180,
+      image: image,
+    },
+    {
+      name: "Wine Tasting Experience",
+      distance: "2 miles away",
+      rating: "8.7/10",
+      reviews: 1500,
+      price: 90,
+      image: "/assets/download.jpg",
+    },
+    {
+      name: "Spa and Massage Package",
+      distance: "1 mile away",
+      rating: "9.5/10",
+      reviews: 430,
+      price: 120,
+      image: image,
+    },
+    {
+      name: "Cooking Class with Chef",
+      distance: "0.7 miles away",
+      rating: "8.9/10",
+      reviews: 540,
+      price: 75,
+      image: "/assets/download.jpg",
+    },
+    {
+      name: "Museum Guided Tour",
+      distance: "1.5 miles away",
+      rating: "8.2/10",
+      reviews: 350,
+      price: 35,
+      image: "/assets/download.jpg",
+    },
+    {
+      name: "Nightlife Bar Crawl",
+      distance: "4 miles away",
+      rating: "9.0/10",
+      reviews: 970,
+      price: 50,
+      image: "/assets/download.jpg",
+    },
+  ];
+
   return (
-    <div className="mt-5">
-      <h1 className="text-3xl font-medium">Choose your room</h1>
+    <div id="rooms" className="mt-5 px-2 md:px-0">
+      <h1 className="text-2xl md:text-3xl font-medium">Choose your room</h1>
       <SearchBar />
-      <div className="space-x-2 py-4">
-  <button className="rounded-3xl px-4 border border-gray-300 p-1 text-sm">All Rooms</button>
-  <button className="rounded-3xl px-4 border border-gray-300 p-1 text-sm">1 Bed</button>
-  <button className="rounded-3xl px-4 border border-gray-300 p-1 text-sm">2 Rooms</button>
-</div>
+      <div className="flex flex-wrap gap-2 py-4">
+        <button className="rounded-3xl px-4 border border-gray-300 p-1 text-sm">
+          All Rooms
+        </button>
+        <button className="rounded-3xl px-4 border border-gray-300 p-1 text-sm">
+          1 Bed
+        </button>
+        <button className="rounded-3xl px-4 border border-gray-300 p-1 text-sm">
+          2 Rooms
+        </button>
+      </div>
 
       <RoomsPage />
-      <div className="p-7 mt-6 bg-amber-50 rounded-2xl">
-        <h1 className="text-4xl font-medium">Have a question?</h1>
+
+      <div className="p-4 md:p-7 mt-6 bg-amber-50 rounded-2xl">
+        <h1 className="text-2xl md:text-4xl font-medium">Have a question?</h1>
         <p className="mt-2 text-gray-600">
           Get instant answers with AI-powered search of property information and
           reviews.
@@ -78,7 +111,6 @@ const Rooms = () => {
               placeholder="Is there free parking?"
               className="w-full p-3 pr-12 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-blue-600"
             />
-
             <button className="absolute right-3 top-1/2 transform -translate-y-1/2 text-blue-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -97,15 +129,20 @@ const Rooms = () => {
             </button>
           </div>
         </div>
-       
       </div>
+
       <hr className="mt-6 border-gray-300" />
-      <h2 className="text-xl font-medium my-4">Similar porperties to Westgate Las Vegas Resort & Casino</h2>
+      <h2 className="text-xl font-medium my-4">
+        Similar properties to Westgate Las Vegas Resort & Casino
+      </h2>
       <SimilarProperties />
       <hr className="my-6 border-gray-300" />
 
-      <h2 className="text-xl font-medium my-4">71 popular things to do nearby</h2>
-      <PopularThingsToDo />
+      <h2 className="text-xl font-medium my-4">
+        71 popular things to do nearby
+      </h2>
+      {/* Pass static activities data via props */}
+      <PopularThingsToDo activities={activities} />
     </div>
   );
 };

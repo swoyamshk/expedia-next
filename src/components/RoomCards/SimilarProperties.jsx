@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../../../public/assets/download.jpg";
+import image from "../../../public/assets/view.webp";
 import SimilarCard from "./SimilarCard";
 
 const SimilarProperties = () => {

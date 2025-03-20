@@ -2,7 +2,7 @@ import React from 'react'
 
 const RoomsText = () => {
   return (
-    <div>
+    <div className='ml-5 sm:ml-0'>
       <h3 className='font-medium text-3xl mb-4'>Rooms</h3>
       <ul>
         {[

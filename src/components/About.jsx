@@ -1,14 +1,14 @@
 import React from "react";
-import image from "../../public/assets/download.jpg";
+import spa from "../../public/assets/spa.avif";
 import { FaRegCommentAlt } from "react-icons/fa"; // Import the regular comment icon
 import Image from "next/image";
 
 
 const About = () => {
   return (
-    <div className="flex flex-wrap px-2">
+    <div id="about" className="flex flex-wrap">
       <Image
-        src={image}
+        src={spa}
         alt="Large Resort View"
         className="w-full h-80 object-cover rounded-md md:w-1/3 md:h-[400px]" // Adjusted height
       />
@@ -24,7 +24,7 @@ const About = () => {
           </p>
         </div>
 
-        <div className="flex items-center rounded-2xl mb-4 bg-gray-100 p-5 py-16 space-x-6">
+        <div className="h-40 sm:h-auto flex items-center rounded-2xl mb-4 bg-gray-100 p-5 py-16 space-x-6">
   <div className="flex items-center justify-center rounded-full bg-blue-300 w-10 h-10 px-3">
     <FaRegCommentAlt  />
   </div>

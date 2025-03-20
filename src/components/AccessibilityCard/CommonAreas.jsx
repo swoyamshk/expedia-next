@@ -2,7 +2,7 @@ import React from 'react'
 
 const CommonAreas = () => {
   return (
-    <div>
+    <div className='ml-5 sm:ml-0'>
       <h3 className='font-medium text-3xl mb-4'>Common Areas</h3>
       <ul className='text-md'>
         {[

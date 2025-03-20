@@ -3,6 +3,10 @@ import PopularCard from "./PopularCard";
 import Image from "next/image";
 
 const PopularThingsToDo = ({ activities }) => {
+  if (!activities || activities.length === 0) {
+    return <div>No activities available.</div>;
+  }
+
   return (
     <div className="overflow-x-auto flex-nowrap whitespace-nowrap no-scrollbar">
       <div className="flex space-x-4">
@@ -13,6 +17,7 @@ const PopularThingsToDo = ({ activities }) => {
     </div>
   );
 };
+
 
 // This function runs at build time to fetch data
 export async function getStaticProps() {

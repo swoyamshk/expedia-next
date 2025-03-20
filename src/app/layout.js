@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
       <meta name="keywords" content="travel, destinations, vacation, tourism" />
       <meta property="og:title" content="Best Travel Destinations 2025" />
       <meta property="og:description" content="Discover amazing places to travel this year." />
-      <meta property="og:image" content="https://expedia.CommonAreas" />
+      <meta property="og:image" content="https://expedia.com" />
       <body
         className={"antialiased"}
       >

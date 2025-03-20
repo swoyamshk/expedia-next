@@ -1,10 +1,13 @@
 import React from "react";
 import RoomCard from "./RoomCard";
 import image from "../../../public/assets/download.jpg";
+import single from "../../../public/assets/single.webp";
+import double from "../../../public/assets/double.avif";
+import master from "../../../public/assets/master.avif";
 
 const rooms = [
   {
-    image: image,
+    image: master,
     title: "Deluxe Room, 1 Queen Bed",
     rating: 8.5,
     reviewText: "Very Good",
@@ -16,9 +19,10 @@ const rooms = [
     bedType: "Queen Bed",
     refundable: true,
     refundDate: "Mon, Apr 22",
+    isPopular: true
   },
   {
-    image: image,
+    image: single,
     title: "Signature Room, 1 King Bed",
     rating: 7.8,
     reviewText: "Good",
@@ -30,9 +34,10 @@ const rooms = [
     bedType: "King Bed",
     refundable: true,
     refundDate: "Tue, Apr 29",
+    isPopular: false
   },
   {
-    image: image,
+    image: double,
     title: "Premium Suite, 2 Double Beds",
     rating: 9.2,
     reviewText: "Excellent",
@@ -43,6 +48,7 @@ const rooms = [
     sleeps: 4,
     bedType: "2 Double Beds",
     refundable: false,
+    isPopular: false
   },
 ];
 
