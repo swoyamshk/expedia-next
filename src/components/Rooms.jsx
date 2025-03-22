@@ -137,7 +137,7 @@ const Rooms = () => {
         71 popular things to do nearby
       </h2>
       {/* Pass static activities data via props */}
-      <PopularThingsToDo activities={activities} />
+      <PopularThingsTodo activities={activities} />
     </div>
   );
 };
