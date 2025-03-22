@@ -1,17 +1,12 @@
 import React from "react";
 import SearchBar from "./SearchBar";
-import RoomCard from "./RoomCards/RoomCard";
 import image from "../../public/assets/hotel.avif";
 import hall from "../../public/assets/hall.webp";
-
 import RoomsPage from "./RoomCards/RoomsPage";
-import SimilarCard from "./RoomCards/SimilarCard";
-import PopularCard from "./RoomCards/PopularCard";
 import SimilarProperties from "./RoomCards/SimilarProperties";
 import PopularThingsToDo from "./RoomCards/PopularThingsTodo";
 
 const Rooms = () => {
-  // Static data for activities
   const activities = [
     {
       name: "Skydiving Adventure",
