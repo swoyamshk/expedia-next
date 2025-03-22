@@ -1,7 +1,7 @@
 import React from "react";
 import PopularCard from "./PopularCard";
 
-const PopularThingsToDo = ({ activities }) => {
+const PopularThingsTodo = ({ activities }) => {
   if (!activities || activities.length === 0) {
     return <div>No activities available.</div>;
   }
@@ -96,4 +96,4 @@ export async function getStaticProps() {
   };
 }
 
-export default PopularThingsToDo;
+export default PopularThingsTodo;

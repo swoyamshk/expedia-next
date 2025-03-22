@@ -4,7 +4,7 @@ import image from "../../public/assets/hotel.avif";
 import hall from "../../public/assets/hall.webp";
 import RoomsPage from "./RoomCards/RoomsPage";
 import SimilarProperties from "./RoomCards/SimilarProperties";
-import PopularThingsToDo from "./RoomCards/PopularThingsTodo";
+import PopularThingsTodo from "./RoomCards/PopularThingsTodo";
 
 const Rooms = () => {
   const activities = [
