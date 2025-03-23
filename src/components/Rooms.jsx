@@ -3,6 +3,7 @@ import SearchBar from "./SearchBar";
 
 import RoomsPage from "./RoomCards/RoomsPage";
 import SimilarProperties from "./RoomCards/SimilarProperties";
+// import PopularThingsTodo from "./RoomCards/PopularThingsTodo";
 import PopularThingsTodo from "./RoomCards/PopularThingsTodo";
 
 const Rooms = ({activities}) => {
