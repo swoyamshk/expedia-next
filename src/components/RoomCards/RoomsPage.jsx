@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import RoomCard from "./RoomCard";
+import RoomDetailsModal from "./RoomDetail";
 import image from "../../../public/assets/download.jpg";
 import single from "../../../public/assets/single.webp";
 import double from "../../../public/assets/double.avif";
@@ -53,13 +54,35 @@ const rooms = [
 ];
 
 const RoomsPage = () => {
+  const [selectedRoom, setSelectedRoom] = useState(null);
+  
+  const handleOpenModal = (room) => {
+    setSelectedRoom(room);
+  };
+  
+  const handleCloseModal = () => {
+    setSelectedRoom(null);
+  };
+  
   return (
-
+    <div>
       <div className="flex flex-wrap space-x-3">
         {rooms.map((room, index) => (
-          <RoomCard key={index} {...room} />
+          <RoomCard 
+            key={index} 
+            {...room} 
+            onClick={() => handleOpenModal(room)}
+          />
         ))}
       </div>
+      
+      {selectedRoom && (
+        <RoomDetailsModal 
+          room={selectedRoom} 
+          onClose={handleCloseModal} 
+        />
+      )}
+    </div>
   );
 };
 

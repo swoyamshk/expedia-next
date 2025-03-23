@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+@import "react-date-range/dist/styles.css"; /* Main style */
+@import "react-date-range/dist/theme/default.css"; /* Theme */
+
 .sticky-navbar {
     position: -webkit-sticky; /* For Safari */
     position: sticky;

@@ -1,3 +1,4 @@
+// Overview.js
 import React from "react";
 import ImageCollage from "./Overview/ImageCollage";
 import StickyNavbar from "./StickyNavbar";
@@ -39,7 +40,7 @@ const PropertyDetails = () => {
         walk to Las Vegas Convention Center
       </p>
 
-      <div className="grid grid-cols-2 gap-2 mt-4 ">
+      <div className="grid grid-cols-2 gap-2 mt-4">
         {features.map((feature, index) => (
           <div key={index} className="flex items-center space-x-2">
             {feature.icon && <span>{feature.icon}</span>}
@@ -66,36 +67,34 @@ const MapSection = () => {
       ></iframe>
       <div className="p-1 space-y-2 mt-2 text-sm font-medium text-gray-600">
         <div className="flex space-x-4">
-          <p className="flex items-center ">
+          <p className="flex items-center">
             <FaMapMarkerAlt className="mr-2" size={16} />
             Las Vegas Convention Center
           </p>
-          <p className="flex items-center ">8 mins walk</p>
-        </div>
-        <div className="flex space-x-4">
-          <p className="flex items-center ">
-            <FaMapMarkerAlt className="mr-2" size={16} />
-            Las Vegas Convention Center
-          </p>
-          <p className="flex items-center ">15 mins walk</p>
+          <p className="flex items-center">8 mins walk</p>
         </div>
         <div className="flex space-x-4">
           <p className="flex items-center">
             <FaMapMarkerAlt className="mr-2" size={16} />
             Las Vegas Convention Center
           </p>
-          <p className="flex items-center ">8 mins walk</p>
+          <p className="flex items-center">15 mins walk</p>
+        </div>
+        <div className="flex space-x-4">
+          <p className="flex items-center">
+            <FaMapMarkerAlt className="mr-2" size={16} />
+            Las Vegas Convention Center
+          </p>
+          <p className="flex items-center">8 mins walk</p>
         </div>
         <div className="flex space-x-4">
           <p className="flex items-center">
             <FaPlane className="mr-2" size={16} />
             Las Vegas, NV (LAS-Harry Reid Intl)
           </p>
-
-          <p className="flex items-center ">10 mins walk</p>
+          <p className="flex items-center">10 mins walk</p>
         </div>
       </div>
-
       <p className="text-blue-600 hover:text-blue-800 my-2 cursor-pointer">
         See all about this area
       </p>
@@ -106,7 +105,10 @@ const MapSection = () => {
 const Overview = () => {
   return (
     <>
-      <div id="overview" className="hidden sm:flex flex-col sm:flex-row justify-between items-center py-4 px-2 sm:px-4">
+      <div
+        id="overview"
+        className="hidden sm:flex flex-col sm:flex-row justify-between items-center py-4 px-2 sm:px-4"
+      >
         <div className="mb-4 sm:mb-0">
           <a href="#" className="hover:underline text-blue-600">
             See all properties
@@ -118,7 +120,6 @@ const Overview = () => {
             <FiShare2 className="text-blue-600 mr-1 mt-0.5" size={20} />
             Share
           </button>
-
           <button className="flex p-1 border rounded-3xl px-2 hover:bg-gray-200">
             <FaRegHeart className="text-red-600 rounded-full p-1" size={25} />
             Save

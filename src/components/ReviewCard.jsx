@@ -4,7 +4,7 @@ const ReviewCard = ({ rating, comment, name, date }) => {
   return (
     <div className="w-52 sm:w-64 flex-shrink-0 rounded-lg border border-gray-200 p-4 bg-white shadow-sm">
       <div className="font-bold text-lg mb-1">{rating}/10 Excellent</div>
-      <p className="text-gray-800 mb-2">{comment}</p>
+      <p className="text-gray-800 mb-2 overflow-hidden text-ellipsis">{comment}</p>
       <a href="#" className="text-blue-500 hover:underline text-sm block mb-4">See more</a>
       
       <div className="mt-2">
@@ -27,7 +27,7 @@ const ReviewCards = () => {
   ];
 
   return (
-    <div className="mx-5 w-full max-w-2xl sm:mx-auto">
+    <div className="w-full max-w-2xl sm:mx-auto">
       <h2 className="text-2xl font-bold mb-6">Guest Reviews</h2>
       <div className="overflow-x-auto whitespace-nowrap scrollbar-hide">
         <div className="flex gap-4">
